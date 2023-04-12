@@ -1,15 +1,11 @@
 import './App.css'
-import React from 'react'
-//import bootstrap from 'bootstrap'
-import TrelloList from './components/TrelloList'
+import Tablero from './components/Tablero'
 
 function App() {
 
-
   return (
     <div className="App">
-      <TrelloList/>
-      
+      <Tablero/>
     </div>
   )
 }
