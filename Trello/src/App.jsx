@@ -1,10 +1,9 @@
 import './App.css'
-import Tablero from './components/Tablero'
-
+import Tablero from './components/Tablero/Tablero'
 function App() {
 
   return (
-    <div className="App">
+    <div className="App container">
       <Tablero/>
     </div>
   )

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Lista from './Lista';
-
-function Tablero() {
+import Lista from '../Lista/Lista'
+import style from '../Tablero/Tablero.css';
+const Tablero = () => {
   // Estado para almacenar las listas de tareas
   const [listas, setListas] = useState([
     { titulo: 'Lista 1', tarjetas: [] },
@@ -10,17 +10,28 @@ function Tablero() {
   ]);
 
   // Función para agregar una nueva lista de tareas
-  function agregarLista() {
+  const agregarLista = () => {
     const nuevaLista = { titulo: 'Nueva Lista', tarjetas: [] };
     setListas([...listas, nuevaLista]);
   }
 
+  // Función para borrar una  lista de tareas
+  const borrarLista = () => {
+    setListas(listas.slice(0, -1));
+  }
+
   return (
-    <div className="tablero">
+    <div className="tablero row">
       {listas.map((lista, index) => (
         <Lista key={index} titulo={lista.titulo} tarjetas={lista.tarjetas} />
       ))}
-      <button onClick={agregarLista}>Agregar Lista</button>
+      <div className='boton-lista d-flex flex-column'>
+        <button onClick={agregarLista} >+</button>
+        <button onClick={borrarLista} >-</button>
+      </div>
+
+
+
     </div>
   );
 }
