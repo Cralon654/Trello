@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from '../Tarjeta/Tarjeta.css';
+
 function Tarjeta(props) {
   // Estado para almacenar el título de la tarjeta
   const [titulo, setTitulo] = useState(props.titulo);

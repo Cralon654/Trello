@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Lista from '../Lista/Lista'
-import style from '../Tablero/Tablero.css';
+
 const Tablero = () => {
   // Estado para almacenar las listas de tareas
   const [listas, setListas] = useState([
