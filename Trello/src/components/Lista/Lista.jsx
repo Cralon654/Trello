@@ -24,7 +24,7 @@ const Lista = (props) => {
 
 
   return (
-    <div className="lista col-6">
+    <div className="lista d-flex flex-column">
       <input type="text" value={titulo} onChange={actualizarTitulo} />
       {tarjetas.map((tarjeta, index) => (
         <Tarjeta key={index} titulo={tarjeta.titulo} descripcion={tarjeta.descripcion} />

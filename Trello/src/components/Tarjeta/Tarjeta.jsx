@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import styles from '../Tarjeta/Tarjeta.css';
 function Tarjeta(props) {
   // Estado para almacenar el título de la tarjeta
   const [titulo, setTitulo] = useState(props.titulo);
@@ -10,7 +10,7 @@ function Tarjeta(props) {
   }
 
   return (
-    <div className="tarjeta">
+    <div className="tarjeta justify-content-around">
       <input type="text" value={titulo} onChange={actualizarTitulo} />
       <p>{props.descripcion}</p>
     </div>
